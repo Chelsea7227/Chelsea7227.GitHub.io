@@ -130,8 +130,6 @@ def get_date(text):
 df=train.groupby("date").mean().rename(columns={"polarity":"polarity_mean","subjectivity":"subjectivity_mean"})
 df
 
-**Bold** and _Italic_ and `Code` text
-
 ```
 
 However, we found that all the average polarity were positive. We thought it may be caused by the inaccuracy of textblob. And we cannot use this data of sentiment to predict the volatility index.
