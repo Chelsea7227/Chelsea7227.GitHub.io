@@ -174,9 +174,10 @@ A problem we encounter during the process is that, at first, we try to set “n_
 
 Complete Python code is listed as follows:
 
+the link of raw_data is:     https://github.com/Chelsea7227/Sentiment-Analysis/blob/master/raw_data.csv
+
 ```markdown
 
-the link of raw_data is:     https://github.com/Chelsea7227/Chelsea7227.GitHub.io/blob/master/raw_data.csv
 from sklearn.model_selection import cross_val_score, ShuffleSplit
 from sklearn.ensemble import RandomForestClassifier
 from operator import itemgetter
