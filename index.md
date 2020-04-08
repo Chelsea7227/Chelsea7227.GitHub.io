@@ -137,6 +137,16 @@ df
 However, we found that all the average polarity were positive. We thought it may be caused by the inaccuracy of textblob. And we cannot use this data of sentiment to predict the volatility index.
 Thus, we tried to build a sentiment analysis model to help us classify the emotions in tweet better. And we use the dataset sentiment140 to train our model and have an accuracy closed to 80%.
 
+## Blog 2
+
+Here we want to share one interesting things we found in our linear regression works.
+Twitter sentiment will better performed as a lacking indicator than a leading indicator.
+When we use total numbers of corona-related twitters and numbers of positive ones among them as the independent variables, the model was better fitted when the dependent variable (y) is [VIX – VIX_yesterday], rather than [VIX_nextday - VIX].
+
+The same phenomena also happened when we use other combinations of dependent variable and independent variables.
+
+Our thoughts: We think this is partly because we use the closed price of VIX in each day, and most of the twitter in a certain day is published during daytime and therefore is considered and reflected in the VIX closed price of the same day. If we want to use twitter sentiment to forecast the next day’s VIX, we’d better try to select tweets that published after the market closing, specifically, tweets at night and tweets in the next morning.
+
 ## Blog 3
 After trying the linear regression model and logit model, we decided to try another model called random forest model. why we choose it? To answer this question, we will suggest some of its advantages which will clear your mind. The first advantage is that it can both handle binary features and numerical features. Secondly, it is great with high dimensionality. Thirdly, it is robust to non-linear data.
 
@@ -235,3 +245,6 @@ for a, b in zip(range(len(label)), ylabel):
         i=i+1
 plt.show
 ```
+
+## Blog 4
+When reviewing our models, we find some drawbacks and maybe we could further improve them. First of all, during the period of our analysis, the market conditions are too complicated. Not only does coronavirus spread rapidly, but financial market fluctuated as well. As we choose OLS, Logit and random forest methods, we may overlook some key variables when establishing models. Besides, even if we know that some factors are crucial to analyze VIX, they are too difficult to measure, such as the monetary easing and fiscal stimulus. In the future, when we can find accurate variables to measure these factors, we could further analyze this topic.
