@@ -48,7 +48,7 @@ import sys, csv , operator
 data = csv.reader(open('data_new.csv'),delimiter=',')
 sortedlist = sorted(data, key = lambda x: x[0],reverse=False)
 print(sortedlist)
-with open("sorted_new.csv", "w", newline = '') as f:
+with open("sorted.csv", "w", newline = '') as f:
     fileWriter = csv.writer(f, delimiter=',')
     fileWriter.writerow(['datetime','content'])
     for row in sortedlist[:len(sortedlist)-1]:
@@ -176,6 +176,7 @@ Complete Python code is listed as follows:
 
 ```markdown
 
+the link of raw_data is:     https://github.com/Chelsea7227/Chelsea7227.GitHub.io/blob/master/raw_data.csv
 from sklearn.model_selection import cross_val_score, ShuffleSplit
 from sklearn.ensemble import RandomForestClassifier
 from operator import itemgetter
